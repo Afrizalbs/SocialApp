@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "781137718260",
+    "project_id": "sosmed-46224",
+    "storage_bucket": "sosmed-46224.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:781137718260:android:df8586613992d08146a7a1",
+        "android_client_info": {
+          "package_name": "com.socialapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "781137718260-merobthcvc9lp0q09i92sn5qcqsjh114.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD6PlHLUisTeGfoHIcxm86mfQ16lwnRq2s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "781137718260-merobthcvc9lp0q09i92sn5qcqsjh114.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
