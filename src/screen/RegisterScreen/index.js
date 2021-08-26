@@ -1,5 +1,5 @@
 /* eslint-disable react-native/no-inline-styles */
-import React, {useState} from 'react';
+import React, {useContext, useState} from 'react';
 import {
   SafeAreaView,
   ScrollView,
@@ -10,11 +10,15 @@ import {
 } from 'react-native';
 import FormButton from '../../components/FormButton';
 import FormInput from '../../components/FormInput';
+import {AuthContext} from '../../router/AuthProvider';
 
 const RegisterScreen = ({navigation}) => {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
   const [confirmPassword, setConfirmPassword] = useState();
+
+  const {register} = useContext(AuthContext);
+
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
       <SafeAreaView style={styles.container}>
@@ -45,7 +49,7 @@ const RegisterScreen = ({navigation}) => {
 
         <FormButton
           buttonTitle="Register"
-          onPress={() => alert('Register Clicked!')}
+          onPress={() => register(email, password)}
         />
 
         <View style={styles.textPrivate}>

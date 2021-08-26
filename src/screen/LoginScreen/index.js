@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {useState} from 'react';
 import {
   Image,
@@ -12,10 +12,13 @@ import {ILLogo} from '../../asset';
 import FormButton from '../../components/FormButton';
 import FormInput from '../../components/FormInput';
 import SocialButton from '../../components/SocialButton';
+import {AuthContext} from '../../router/AuthProvider';
 
 const LoginScreen = ({navigation}) => {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
+  const {login} = useContext(AuthContext);
+
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
       <SafeAreaView style={styles.container}>
@@ -40,7 +43,7 @@ const LoginScreen = ({navigation}) => {
 
         <FormButton
           buttonTitle="Login"
-          onPress={() => alert('Sign In Clicked!')}
+          onPress={() => login(email, password)}
         />
 
         <TouchableOpacity style={styles.forgotButton}>
